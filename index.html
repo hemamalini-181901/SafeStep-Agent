@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SafeStep | Smart Maternal Safety</title>
+
+  <meta name="description"
+    content="SafeStep - Smart Maternal Safety and Monitoring System using IoT.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- LANDING PAGE -->
+
+  <section id="welcomePage">
+
+    <nav class="landing-nav">
+
+      <div class="logo">
+        <div class="logo-mark">♥</div>
+        <span>SafeStep</span>
+      </div>
+
+      <div class="landing-nav-actions">
+        <button class="text-btn" id="learnMoreBtn">
+          About Us
+        </button>
+
+        <button class="primary-btn" id="getStartedBtn">
+          Get Started →
+        </button>
+      </div>
+
+    </nav>
+
+    <main class="landing-content">
+
+      <div class="landing-copy">
+
+        <div class="eyebrow">
+          <span>✦</span>
+          SMART MATERNAL CARE
+        </div>
+
+        <h1>
+          Every Step.<br>
+          Every Heartbeat.<br>
+          <span>Every Life Matters.</span>
+        </h1>
+
+        <p>
+          A smarter way to protect mothers through intelligent
+          wearable technology, real-time safety monitoring and
+          connected healthcare.
+        </p>
+
+        <div class="landing-buttons">
+
+          <button class="primary-btn" id="getStartedBtn2">
+            Get Started →
+          </button>
+
+          <button class="secondary-btn" id="learnMoreBtn2">
+            Discover SafeStep
+          </button>
+
+        </div>
+
+        <div class="landing-features">
+
+          <div class="feature-mini">
+            <span>✓</span> Smart Monitoring
+          </div>
+
+          <div class="feature-mini">
+            <span>✓</span> Emergency Alerts
+          </div>
+
+          <div class="feature-mini">
+            <span>✓</span> Connected Care
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="hero-circle">
+
+          <div class="hero-person">
+            <div class="person-hair"></div>
+            <div class="person-head"></div>
+            <div class="person-body"></div>
+            <div class="person-belly"></div>
+          </div>
+
+        </div>
+
+        <div class="heart-float">♥</div>
+        <div class="watch-float">⌚</div>
+
+        <div class="safe-float">
+          ✓ Mother Protected
+        </div>
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+  <!-- LOGIN / SIGNUP PAGE -->
+
+  <section id="authPage" class="hidden">
+
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        <div class="logo">
+          <div class="logo-mark">♥</div>
+          <span>SafeStep</span>
+        </div>
+      </div>
+
+      <h2 id="authTitle">Welcome Back!</h2>
+
+      <p class="auth-subtitle" id="authSubtitle">
+        Sign in to continue your SafeStep journey.
+      </p>
+
+      <form id="authForm">
+
+        <div class="form-group hidden" id="signupExtra">
+
+          <label for="authName">Full Name</label>
+
+          <input
+            type="text"
+            id="authName"
+            placeholder="Enter your full name"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="authEmail">Email Address</label>
+
+          <input
+            type="email"
+            id="authEmail"
+            placeholder="Enter your email"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="authPassword">Password</label>
+
+          <input
+            type="password"
+            id="authPassword"
+            placeholder="Enter your password"
+            required
+          >
+
+        </div>
+
+        <div class="form-group hidden" id="signupRoleGroup">
+
+          <label for="authRole">I am a</label>
+
+          <select id="authRole">
+            <option value="patient">Patient</option>
+            <option value="doctor">Doctor</option>
+          </select>
+
+        </div>
+
+        <button type="submit" class="primary-btn full-btn" id="authSubmit">
+          Sign In →
+        </button>
+
+        <p class="auth-message" id="authMessage"></p>
+
+      </form>
+
+      <div class="auth-switch">
+        <span id="authSwitchText">Don't have an account?</span>
+
+        <button id="authSwitchBtn" type="button">
+          Sign Up
+        </button>
+      </div>
+
+      <button class="text-btn" id="authBack" type="button">
+        ← Back to Home
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- FIRST TIME PROFILE SETUP -->
+
+  <section id="onboardingPage" class="hidden">
+
+    <div class="onboarding-card">
+
+      <div class="auth-logo">
+        <div class="logo">
+          <div class="logo-mark">♥</div>
+          <span>SafeStep</span>
+        </div>
+      </div>
+
+      <h2>Let's Get You Started!</h2>
+
+      <p class="auth-subtitle" id="onboardWelcome">
+        Complete your profile to personalize your experience.
+      </p>
+
+      <form id="profileForm">
+
+        <div class="form-group">
+
+          <label for="profileName">Full Name</label>
+
+          <input
+            type="text"
+            id="profileName"
+            placeholder="Enter your name"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="profilePhone">Phone Number</label>
+
+          <input
+            type="tel"
+            id="profilePhone"
+            placeholder="Enter phone number"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="profileAge">Age</label>
+
+          <input
+            type="number"
+            id="profileAge"
+            placeholder="Enter your age"
+            min="18"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="profileRole">Select Your Role</label>
+
+          <select id="profileRole" required>
+            <option value="patient">Patient</option>
+            <option value="doctor">Doctor</option>
+          </select>
+
+        </div>
+
+        <div id="patientFields">
+
+          <div class="form-group">
+
+            <label for="pregnancyMonth">
+              Current Pregnancy Month
+            </label>
+
+            <select id="pregnancyMonth">
+              <option value="">Select month</option>
+              <option value="1">Month 1</option>
+              <option value="2">Month 2</option>
+              <option value="3">Month 3</option>
+              <option value="4">Month 4</option>
+              <option value="5">Month 5</option>
+              <option value="6">Month 6</option>
+              <option value="7">Month 7</option>
+              <option value="8">Month 8</option>
+              <option value="9">Month 9</option>
+            </select>
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="assignedDoctor">
+              Assigned Doctor
+            </label>
+
+            <input
+              type="text"
+              id="assignedDoctor"
+              placeholder="Enter doctor name"
+            >
+
+          </div>
+
+        </div>
+
+        <div id="doctorFields" class="hidden">
+
+          <div class="form-group">
+
+            <label for="specialization">
+              Medical Specialization
+            </label>
+
+            <input
+              type="text"
+              id="specialization"
+              placeholder="Example: Gynecologist"
+            >
+
+          </div>
+
+          <div class="form-group">
+
+            <label for="doctorCode">
+              Hospital / Clinic
+            </label>
+
+            <input
+              type="text"
+              id="doctorCode"
+              placeholder="Enter hospital name"
+            >
+
+          </div>
+
+        </div>
+
+        <button type="submit" class="primary-btn full-btn">
+          Complete Profile →
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN DASHBOARD -->
+
+  <section id="dashboardPage" class="hidden">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <div class="logo">
+        <div class="logo-mark">♥</div>
+        <span>SafeStep</span>
+      </div>
+
+      <p class="sidebar-label">MAIN MENU</p>
+
+      <nav class="sidebar-nav">
+
+        <button class="nav-item active" data-view="overview">
+          <span class="nav-icon">⌂</span>
+          Overview
+        </button>
+
+        <button class="nav-item" data-view="patients" id="patientsNav">
+          <span class="nav-icon">♧</span>
+          Patients
+        </button>
+
+        <button class="nav-item" data-view="device" id="deviceNav">
+          <span class="nav-icon">⌚</span>
+          Device Connection
+        </button>
+
+        <button class="nav-item" data-view="history">
+          <span class="nav-icon">▤</span>
+          Monitoring History
+        </button>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <button id="helpBtn">
+          ? Help & Support
+        </button>
+
+        <button id="logoutBtn">
+          ↪ Sign Out
+        </button>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-area">
+
+      <header class="topbar">
+
+        <div>
+          <p id="dashEyebrow">SAFESTEP DASHBOARD</p>
+          <h2 id="dashGreeting">Welcome!</h2>
+        </div>
+
+        <div class="topbar-right">
+
+          <div class="avatar" id="profileAvatar">
+            H
+          </div>
+
+        </div>
+
+      </header>
+
+      <div id="dashboardContent">
+
+        <!-- JavaScript renders dashboard here -->
+
+      </div>
+
+    </main>
+
+  </section>
+
+
+  <!-- TOAST MESSAGE -->
+
+  <div id="toast" class="hidden"></div>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="app.js"></script>
+
+</body>
+</html>
